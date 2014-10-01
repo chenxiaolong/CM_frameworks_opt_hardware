@@ -17,7 +17,7 @@
 package org.cyanogenmod.hardware;
 
 /**
- * Glove mode / high touch sensitivity (on Samsung Galaxy S4)
+ * Glove mode / high touch sensitivity
  */
 public class HighTouchSensitivity {
 
@@ -27,6 +27,14 @@ public class HighTouchSensitivity {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() { return false; }
+
+    /**
+     * This method return the current activation status of high touch sensitivity
+     *
+     * @return boolean Must be false if high touch sensitivity is not supported or not activated,
+     * or the operation failed while reading the status; true in any other case.
+     */
+    public static boolean isEnabled() { return false; }
 
     /**
      * This method allows to setup high touch sensitivity status.
